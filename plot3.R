@@ -12,12 +12,12 @@ names(myData) <- c("Date/Time", "Global_active_power", "Global_reactive_power", 
 # Open "PNG" device
 png(filename="plot3.png", width=480, height=480)
 # Prepare the plot, but do not add any points
-plot(myData$Date, as.numeric(myData$Sub_metering_1), pch=NA, main="", ylab = "Energy Sub Metering", xlab = "")
+plot(myData$Date, as.numeric(myData$Sub_metering_1), pch=NA, main="", ylab = "Energy sub metering", xlab = "")
 # Connect the dots: black is station 1, red is 2, blue is 3
 lines(myData$Date, as.numeric(myData$Sub_metering_1), col="black")
 lines(myData$Date, as.numeric(myData$Sub_metering_2), col="red")
 lines(myData$Date, as.numeric(myData$Sub_metering_3), col="blue")
-# Add a legent
+# Add a legend
 legend("topright",
        c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"),
        lty=c(1,1,1),
